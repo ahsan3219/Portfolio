@@ -1,0 +1,488 @@
+<html>
+	<head>
+		<title>Profile Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+<style>
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+nav ul{
+	background-attachment: fixed;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+}
+nav ul li{
+	display: inline-block;
+	margin: 40px;
+	margin-bottom: 15px;
+	margin-top: 25px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #ddd;
+}
+nav ul li a:hover{
+	color: #999;
+}
+.centered{
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+.line{
+	display: block;
+	width: 290px;
+	height: 3px;
+	padding: 0 !important;
+	background:#ccc;
+}
+#welcome{
+	background-color: #131313;
+	min-height: 100%;
+	height: 480px;
+	padding-top: 60px;
+	background-attachment: fixed;
+  	background-position: top;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	color: #ddd;
+	padding: 60px;
+	text-align: center;
+}
+#welcome h1{
+	padding-top: 90px;
+	font-size: 90px;
+}
+#welcome h4{
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#welcome p{
+	font-size: 20px;
+	color: white;
+	padding:30px 30px 0px 30px;
+}
+#welcome button{
+	background-color: transparent;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	-webkit-transition-duration:0.4s;
+	transition-duration:0.4s;
+	cursor: pointer;
+}
+#welcome .button1 { 
+  color: #4CAF50; 
+  border: 2px solid #4CAF50;
+}
+
+#welcome .button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#welcome .button2 {
+  color: #1da1f2; 
+  border: 2px solid #1da1f2;
+}
+
+#welcome .button2:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+#welcome .button3 {
+  color: #e1306c; 
+  border: 2px solid #e1306c;
+}
+
+#welcome .button3:hover {
+  background-color: #e1306c;
+  color: white;
+}
+
+#welcome .button4 {
+  color: #0077B5;
+  border: 2px solid #0077B5;
+}
+
+#welcome .button4:hover {
+	background-color: #0077B5;
+	color: white;
+}
+#welcome .button5 {
+  color: #505050;
+  border: 2px solid #505050;
+}
+
+#welcome .button5:hover {
+	background-color: #505050;
+	color: white;
+}
+
+#about{
+	background-color: rgb(238, 238, 238);;
+	padding: 30px;
+}
+#about h3{
+	font-size: 30px;
+	text-align: center;
+}
+
+.about-grid-container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap:20px;
+}
+.about-grid-container > div{
+	padding: 20px 0;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+.item_about{
+	grid-column-start:1;
+	grid-column-end:3;
+}
+.item_about p{
+	text-align: center;
+	padding-top: 30px;
+}
+.item_img img{
+	width: 100%;
+}
+.interest1, .interest2, .interest3{
+	border-radius: 10px;
+	position: relative;
+	margin: 0 auto;
+	background-position: top;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	height: 250px;
+}
+.interest1{
+	color: white;
+	background-image: url("https://raw.githubusercontent.com/snaily16/Freecodecamp-projects/master/profile-page/prev.png");	
+}
+.interest2{
+	color: white;
+	background-image: url("https://raw.githubusercontent.com/snaily16/Freecodecamp-projects/master/profile-page/image.jpg");
+}
+.interest3{
+	color: white;
+	background-image: url("https://raw.githubusercontent.com/snaily16/Freecodecamp-projects/master/profile-page/sport.jpg");
+}
+.interest1 p, .interest2 p, .interest3 p{
+	padding: 30px;
+	padding-top: 50px;
+}
+.interest1:hover, .interest2:hover, .interest3:hover{
+	background: rgba(1,1,1,1);
+}
+
+#skills{
+	padding: 30px;
+	background-color: rgb(255, 255, 255);;
+}
+#skills h3{
+	text-align: center;
+	font-family: serif;
+	font-size: 30px;
+}
+.hr1{
+	display: block;
+	margin-left: 40%;
+	width:20%;
+	color: #111;
+	border:2px solid;
+}
+#skills p{
+	padding:20px;
+	text-align: center;
+}
+#skills img{
+	width: 10%;
+	padding: 10px;
+}
+.skills-grid-container{
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 10px;
+	grid-gap:20px;
+}
+.skill-grid{
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+#projects{
+	text-align: center;
+	padding: 30px;
+	background-color: rgb(238, 238, 238);
+}
+#projects h3{
+	font-size: 30px;
+}
+.project-container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+	grid-gap:20px;
+}
+.project-container a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+.proj{
+	border-radius: 10px;
+	border: 2px solid #555;
+	margin: 40px;
+	padding: 5px;
+	box-shadow: 1px 1px #888888;
+}
+.proj:hover{
+	box-shadow: 5px 10px #888888;
+}
+.proj img{
+	width: 100%;
+	height: auto;
+}
+.project-title{
+	padding: 15px;
+	text-align: center;
+}
+
+footer{
+	background-color: #131313;
+	padding: 30px;
+	color: white;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that float next to each other */
+.column-2 {
+  float: left;
+  width: 45%;
+  padding: 40px; 
+  padding-left:70px;
+  padding-right: 70px;
+  height: 475px;
+  margin:30px;
+  margin-right:30px;
+  margin-bottom: 70px;
+  background-color: #FEDE00;
+  line-height:2;
+}
+.large-profile {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-W_bmsifisRw7Z9Bu_-IPNaCgc5TNI_l4g&usqp=CAU');
+  background-size: cover;
+  background-position: center;
+
+  width: 400px;
+  margin-right: 5 0%;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+	</head>
+	<body>
+		<nav>
+			<ul id='navbar'>
+				<li><a href="#welcome">Home</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+			</ul>
+		</nav>
+		<section id="welcome">
+			<h1>Ahsan Raza</h1>
+			<h4>COMPUTER SCIENCE</h4>
+			<div>
+				<a href="https://github.com/snaily16" target="_blank"><button class="button button1"><i class="fa fa-github"></i> Github</button></a>
+				<a href="https://twitter.com/snehal_gharat" target="_blank"><button class="button button2"><i class="fa fa-twitter"></i> Twitter</button></a>
+				<a href="https://www.instagram.com/_snaily16_/" target="_blank"><button class="button button3"><i class="fa fa-instagram"></i> Instagram</button></a>
+				<a href="https://www.linkedin.com/in/snehal-gharat-989756117/" target="_blank"><button class="button button4"><i class="fa fa-linkedin"></i> LinkedIn</button></a>
+					</div>
+			<p>Welcome to my digital portfolio. This is where I showcase all the cool stuff that I have enjoyed working on recently.</p>
+		</section>
+		<section id="about">
+			
+			<div class="about-grid-container">
+				
+                . . .
+                <!--Section 2: About me-->
+                
+                        <div class="column-2">
+                            <h1>About me</h1>
+                            <p style="font-size: 17px;" >Hi! I'm Sammy the Shark, Senior Selachimorpha at DigitalOcean by day, dabbler in all things dev by night. This site is a demonstration website for the tutorial series "<a href="https://www.digitalocean.com/community/tutorial_series/how-to-build-a-website-with-css">How To Build a Website With CSS</a>," which walks you through building and customizing this website from start to finish.</p>
+                            <p>If you're following this tutorial series, you can replace this text with your own "About Me" content.</p>    
+                        </div>
+                
+             
+                <div class="column-2 large-profile">
+                </div>
+            
+            </div>
+
+		</section>
+		<section id="skills">
+			<h3>SKILLS</h3>
+			<div class="centered line"></div>
+			
+			<p>I've worked with a wide variety of programming languages. For web applications I use PHP and Javascript. Whenever I need the most performance possible I obviously go with C++ and finally when I am building prototypes or working on my hobby projects I fall back on Python</p>
+
+			<div class="skills-grid-container">
+				<div class="skill-grid">
+					<h5>Programming Languages</h5>
+				<img src="https://i1.wp.com/qavalidation.com/wp-content/uploads/2018/02/python-logo.png?ssl=1" alt="Python">
+				<img src="https://i.imgur.com/h0oxKKq.jpg" alt="cpp">
+				<img src="http://www.redlapdigital.com/images/training/java.png" alt="java">
+				</div>
+
+				<div class="skill-grid">
+					<h5>Web Development</h5>
+					<img src="http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png">
+					<img src="http://www.sclance.com/pngs/javascript-logo-png/javascript_logo_png_728629.png" alt="Javascript">
+					<img src="https://pngimg.com/uploads/php/php_PNG29.png" alt="PHP">
+					<img src="https://pngimg.com/uploads/mysql/mysql_PNG19.png" alt="mysql">
+				</div>
+			</div>
+			
+		</section>
+		<section id="projects">
+			<h3>PROJECTS</h3>
+			<div class="centered line"></div>
+
+			<div class="project-container">
+				<a href="https://github.com/snaily16/Digit-Recognizer">
+				<div class="proj">
+					<img src="https://raw.githubusercontent.com/snaily16/Digit-Recognizer/master/numbers.gif" alt="Digit Recognizer"> 
+					<div class="project-title">
+						Realtime Digit Recognizer
+					</div>
+				</div>
+				</a>
+				<a href="https://github.com/snaily16/DiabetesPredictor">
+				<div class="proj">
+					<img src="https://raw.githubusercontent.com/snaily16/Freecodecamp-projects/master/profile-page/diabetes.png"> 
+					<div class="project-title">Diabetes Predictor
+					</div>
+				</div>
+				</a>
+				<a href="https://github.com/snaily16/mobile_detection">
+				<div class="proj">
+					<img src="https://raw.githubusercontent.com/snaily16/mobile_detection/master/sample.png" alt="Mobile Detection"> 
+					<div class="project-title">Object Detector
+					</div>
+				</div>
+				</a>
+				<a href="https://github.com/snaily16/OnlineQuiz">
+				<div class="proj">
+					<img src="https://raw.githubusercontent.com/snaily16/Freecodecamp-projects/master/profile-page/quiz.png" alt="ProgChamp Quiz"> 
+					<div class="project-title">Online Quiz</div>
+				</div>
+				</a>
+				<a href="https://github.com/snaily16/ProChamp-1-master">
+				<div class="proj">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRegxFvVgB7_Pq6UNOMO6kRdQVLlSiRq2yPu_09qNYwBTcprwcB" alt="ProgChamp Android App"> 
+					<div class="project-title">ProgChamp</div>	
+				</div>
+				</a>
+			</div>
+			
+			
+		</section>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+		<footer>
+			<p>Copyright © 2019Site designed and developed by Snehal Gharat</p>
+			<p>This website is currently under construction and will be fully functioning very soon</p>
+		</footer>
+
+
+
+
+
+        <script>//Get the button:
+            mybutton = document.getElementById("myBtn");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }</script>
+	</body>
+</html>
